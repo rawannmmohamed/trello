@@ -217,9 +217,8 @@
   cursor: pointer;
   &:hover {
     color: var(--color-grey-dark-1);
-    span{
+    span {
       margin-left: 8px;
-      
     }
   }
   &:focus {
@@ -228,7 +227,7 @@
   }
   & span {
     margin-left: 3px;
-    transition: margin-left .2s;
+    transition: margin-left 0.2s;
   }
 }
 .paragraph:not(:last-of-type) {
@@ -327,6 +326,52 @@
     color: var(--color-grey-light-2);
     font-family: sans-serif;
     z-index: 1;
+  }
+}
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+  &__book-now {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
+}
+.btn {
+  position: relative;
+  font: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  color: #fff;
+  padding: 2rem 7.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.1s;
+  }
+
+  &__invisible {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    padding: 2rem 0;
+  }
+  &:hover &__invisible {
+    top: 0;
+  }
+  &:hover &__visible {
+    transform: translateY(250%);
   }
 }
 
